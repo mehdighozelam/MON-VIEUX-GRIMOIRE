@@ -156,6 +156,8 @@ exports.updateBook = (req, res, next) => {
             // Mettre à jour les champs du livre avec les nouvelles valeurs
             foundBook.title = updatedBookData.title || foundBook.title;
             foundBook.author = updatedBookData.author || foundBook.author;
+            foundBook.year = updatedBookData.year || foundBook.year;
+            foundBook.genre = updatedBookData.genre || foundBook.genre;
 
             // Si une nouvelle image est téléchargée, supprimer l'ancienne image et enregistrer la nouvelle
             if (req.file) {
@@ -194,9 +196,8 @@ exports.updateBook = (req, res, next) => {
 
 // Dans bookController.js
 exports.rateBook = async (req, res, next) => {
-    const userId = req.body.userId;
     const bookId = req.params.id;
-    const { rating } = req.body;
+    const { rating,userId } = req.body;
 
     try {
         console.log("UserID:", userId);

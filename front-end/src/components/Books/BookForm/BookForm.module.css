@@ -63,6 +63,7 @@
     padding: 43px 81px;
     border: dashed 1px #D9A963;
     margin-bottom: 40px;
+    cursor: pointer; /* Ajout du pointeur en forme de main */
 }
 
 .AddImage img {

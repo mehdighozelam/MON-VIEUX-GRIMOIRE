@@ -34,7 +34,7 @@ function BookRatingForm({
     console.log(update);
     if (update) {
       // eslint-disable-next-line no-underscore-dangle
-      setBook({ ...update, id: update._id });
+      setBook({ ...update.book });
     } else {
       alert(update);
     }
